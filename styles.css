@@ -285,6 +285,15 @@ h1 {
   width: max-content;
   min-height: 3rem;
   animation: ticker 24s linear infinite;
+  will-change: transform;
+}
+
+.ticker-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
 }
 
 .ticker span,
