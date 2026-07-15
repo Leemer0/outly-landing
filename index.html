@@ -1,54 +1,120 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Outly is coming soon to Toronto. Say you met at a bar, not a dating app."
+      content="Outly is coming soon to Toronto. See where people are going tonight, pick a bar, and meet in real life."
     />
-    <meta name="theme-color" content="#080b10" />
-    <meta property="og:title" content="Outly — Coming soon" />
+    <meta name="theme-color" content="#070a0d" />
+    <meta property="og:title" content="Outly — Meet in real life" />
     <meta
       property="og:description"
-      content="Say you met at a bar, not a dating app."
+      content="Say you met at a bar, not a dating app. Coming soon to Toronto."
     />
     <meta property="og:type" content="website" />
-    <title>Outly — Coming soon</title>
+    <meta property="og:url" content="https://www.getoutly.app/" />
+    <meta
+      property="og:image"
+      content="https://www.getoutly.app/assets/outly-night-v2.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Outly — Coming soon to Toronto</title>
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
     <link rel="icon" href="assets/outly-mark.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/outly-night-v2.webp"
+      imagesrcset="assets/outly-night-v2-mobile.webp 960w, assets/outly-night-v2.webp 1672w"
+      imagesizes="100vw"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <main class="coming-soon">
+    <a class="skip-link" href="#hero-title">Skip to headline</a>
+
+    <main class="site-shell" data-scene>
+      <picture class="hero-media" aria-hidden="true">
+        <source
+          media="(max-width: 700px)"
+          srcset="assets/outly-night-v2-mobile.webp"
+        />
+        <img
+          src="assets/outly-night-v2.webp"
+          alt=""
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        />
+      </picture>
+      <div class="media-wash" aria-hidden="true"></div>
+      <div class="pointer-light" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
       <header class="site-header">
         <a class="brand" href="./" aria-label="Outly home">
-          <img src="assets/outly-mark.svg" alt="Outly" width="112" height="56" />
+          <img src="assets/outly-mark.svg" alt="Outly" width="120" height="60" />
         </a>
-        <p>Toronto, Canada</p>
+
+        <div class="header-signal" aria-label="Outly launch status">
+          <span class="signal-dot" aria-hidden="true"></span>
+          <span>Toronto</span>
+          <span class="divider" aria-hidden="true"></span>
+          <time data-toronto-time>Tonight</time>
+        </div>
       </header>
 
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="status"><span aria-hidden="true"></span> Coming soon</p>
-          <h1 id="hero-title">
-            Say you met at a bar,<br />
-            <em>not a dating app.</em>
-          </h1>
-          <p class="intro">
-            See where people are going tonight, pick a bar, and meet in real life.
+          <p class="eyebrow reveal reveal-1">
+            <span>Coming soon</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span data-neighbourhood>Ossington</span>
           </p>
+
+          <h1 id="hero-title" aria-label="Say you met at a bar, not a dating app.">
+            <span class="headline-line"><span class="reveal-word reveal-2">Say you met</span></span>
+            <span class="headline-line"><span class="reveal-word reveal-3">at a bar,</span></span>
+            <span class="headline-line accent-line"><span class="reveal-word reveal-4">not a dating app.</span></span>
+          </h1>
+
+          <div class="hero-foot reveal reveal-5">
+            <p>
+              See where people are going tonight.<br />
+              Pick a bar. Meet in real life.
+            </p>
+            <span class="launch-stamp">
+              <b>01</b>
+              <span>Launching first<br />in Toronto</span>
+            </span>
+          </div>
         </div>
 
-        <p class="launch-note">Launching first in Toronto</p>
+        <aside class="photo-note reveal reveal-6" aria-label="Outly purpose">
+          <span class="photo-note-line" aria-hidden="true"></span>
+          <p>Less swiping.<br /><strong>More arriving.</strong></p>
+        </aside>
       </section>
 
-      <div class="city" aria-hidden="true">
-        <div class="city-glow"></div>
-        <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
-          <path d="M0 220V176h62v-28h28v28h34v-59h42v59h47v-34h33v34h50V97h13V61h10v36h17v79h43v-51h62v51h38v-28h41v28h47v-71h24v-25h22v25h28v71h35v-44h66v44h53v-63h43v63h33v-31h73v31h39V91h15V48h12v43h17v85h44v-38h58v38h49v-57h29v57h45v44H0Z" />
-          <path class="tower" d="M714 220V71h5V37h4V6h5v31h4v34h6v149Z" />
-        </svg>
-      </div>
+      <footer class="ticker" aria-label="Toronto launch neighbourhoods">
+        <div class="ticker-track">
+          <span>Ossington</span><i></i><span>King West</span><i></i>
+          <span>Queen West</span><i></i><span>College</span><i></i>
+          <strong>Meet tonight</strong><i></i>
+          <span aria-hidden="true">Ossington</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">King West</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Queen West</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">College</span><i aria-hidden="true"></i>
+          <strong aria-hidden="true">Meet tonight</strong><i aria-hidden="true"></i>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
